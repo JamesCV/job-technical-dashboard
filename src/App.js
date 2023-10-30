@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import CSVLoader from './CSVLoader';
+import Map from './Map';
+import Filter from './Filter';
+import React, { useState } from 'react';
 
 function App() {
+  const [data, setData] = useState([]);
+  const [filterValue, setFilterValue] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="App">
+      <h1 class="app-header">Temperature Exceedences Map</h1>
+      <div class="app-container">
+        <div class="list-view">
+          <CSVLoader onDataLoaded={setData}/>
+        </div>
+        <div class="map-view">
+          <Map data={data} />
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  color: White;
+  height: 100%;
+  background: #4682B4;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -13,19 +22,40 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Copperplate";
+  font-size: 40px;
+  border-bottom: 1.5px solid White;
+  background-color: #2771af;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.list-view {
+  flex: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.map-view {
+  flex: 1;
+  padding-top: 35px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  height: 1100px;
 }
 
 @keyframes App-logo-spin {

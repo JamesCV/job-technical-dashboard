@@ -1,0 +1,14 @@
+Form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+#search-bar {
+
+}
+
+#search-button {
+  background-color: #6A5ACD;
+}
